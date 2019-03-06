@@ -80,6 +80,26 @@ A thread can be waiting for other thread to finish using thread join or it can b
 # Dead / Terminated
 Once the thread finished executing, it’s state is changed to Dead and it’s considered to be not alive.
 
+# Let's discuss about some useful methods of thread
+# Thread.sleep in Java
+Thread.sleep() method can be used to pause the execution of current thread for specified time in milliseconds. The argument value for **milliseconds can’t be negative**, else it throws **IllegalArgumentException**.
 
+# Important about Thread.sleep()
+    1. It always pause the current thread execution.
+    2. The actual time thread sleeps before waking up and start execution depends on system timers and schedulers. For a quiet system, the actual time for sleep is near to the specified sleep time but for a busy system it will be little bit more.
+    3. Thread sleep doesn’t lose any monitors or locks current thread has acquired.
+    4. Any other thread can interrupt the current thread in sleep, in that case **InterruptedException** is thrown.
+    
 
+# How Does Thread Sleep Works?
+Thread.sleep() interacts with the thread scheduler to put the current thread in wait state for specified period of time. Once the wait time is over, thread state is changed to runnable state and wait for the CPU for further execution. So the actual time that current thread sleep depends on the thread scheduler that is part of operating system.
+
+# Java Thread Join Example
+**Java Thread join** method can be used to pause the current thread execution until unless the specified thread is dead. There are three overloaded join functions.
+
+*public final void join():* This java thread join method puts the current thread on wait until the thread on which it’s called is dead. If the thread is interrupted, it throws InterruptedException.
+
+*public final synchronized void join(long millis):* This java thread join method is used to wait for the thread on which it’s called to be dead or wait for specified milliseconds. Since thread execution depends on OS implementation, it doesn’t guarantee that the current thread will wait only for given time.
+
+*public final synchronized void join(long millis, int nanos):* This java thread join method is used to wait for thread to die for given milliseconds plus nanoseconds.
 
