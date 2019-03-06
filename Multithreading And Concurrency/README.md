@@ -1,6 +1,6 @@
 
-To understand multithreading and concurrency first we need to understand about 
-Process & Thread 
+# To understand multithreading and concurrency first we need to understand about 
+**Process & Thread** 
 
 # Process:
 A list of processes as displayed by htop
@@ -54,8 +54,8 @@ Implementing Runnable is preferred because java supports implementing multiple i
 **From Java 8 onwards, Runnable is a functional interface and we can use lambda expressions to provide it’s implementation rather than using anonymous class.**
 Like below - 
 	
-	`Runnable task2 = () -> { System.out.println("Task #2 is running"); };
+	Runnable task2 = () -> { System.out.println("Task #2 is running"); };
 	
 	// start the thread
 	
-	new Thread(task2).start();`
+	new Thread(task2).start();
