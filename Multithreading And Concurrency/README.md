@@ -64,7 +64,7 @@ Code below -
 Understanding lifecycle of thread is important when you're going to deal with Multithreading programming. 
 We can create a thread in java and start it but how the thread states change from **Runnable to Running to Blocked** depends on the OS implementation of thread scheduler and java doesn’t have full control on that.
 
-# Let's discuss little bit details about life cycle states
+# Let's discuss little bit details about thread life cycle states
 # New
 When we create a new Thread object using new operator, thread state is New Thread. At this point, thread is not alive and it’s a state internal to Java programming.
 
