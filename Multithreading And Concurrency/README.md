@@ -54,7 +54,5 @@ Implementing Runnable is preferred because java supports implementing multiple i
 Like below - 
 	
 	Runnable task2 = () -> { System.out.println("Task #2 is running"); };
-	
 	// start the thread
-	
 	new Thread(task2).start();
