@@ -53,6 +53,7 @@ Implementing Runnable is preferred because java supports implementing multiple i
 
 **From Java 8 onwards, Runnable is a functional interface and we can use lambda expressions to provide it’s implementation rather than using anonymous class.**
 Like below - 
+	
 	`Runnable task2 = () -> { System.out.println("Task #2 is running"); };
 	
 	// start the thread
