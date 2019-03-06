@@ -5,7 +5,7 @@ Process & Thread
 # Process:
 A list of processes as displayed by htop
 In computing, a process is the instance of a computer program that is being executed. It contains the program code and its activity. Depending on the operating system (OS), a process may be made up of multiple threads of execution that execute instructions concurrently. from - https://en.wikipedia.org/wiki/Process_(computing)
-
+? etc. 
 # Thread:
 A process with two threads of execution, running on one processor
 In computer science, a thread of execution is the smallest sequence of programmed instructions that can be managed independently by a scheduler, which is typically a part of the operating system. The implementation of threads and processes differs between operating systems, but in most cases a thread is a component of a process. Multiple threads can exist within one process, executing concurrently and sharing resources such as memory, while different processes do not share these resources. In particular, the threads of a process share its executable code and the values of its dynamically allocated variables and non-thread-local global variables at any given time.
@@ -54,5 +54,7 @@ Implementing Runnable is preferred because java supports implementing multiple i
 **From Java 8 onwards, Runnable is a functional interface and we can use lambda expressions to provide it’s implementation rather than using anonymous class.**
 Like below - 
 	`Runnable task2 = () -> { System.out.println("Task #2 is running"); };
+	
 	// start the thread
+	
 	new Thread(task2).start();`
