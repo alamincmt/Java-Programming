@@ -1,6 +1,5 @@
 
-# To understand multithreading and concurrency first we need to understand about 
-**Process & Thread** 
+# To understand multithreading and concurrency first we need to understand #Process And #Thread
 
 # Process:
 A list of processes as displayed by htop
