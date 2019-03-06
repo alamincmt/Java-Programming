@@ -18,25 +18,27 @@ Every java application has at least one thread – main thread. Although there a
 Multithreading refers to two or more threads executing concurrently in a single program. A computer single core processor can execute only one thread at a time and time slicing is the OS feature to share processor time between different processes and threads.
 
 # Advantages of multithreading:
-	Java Threads are lightweight compared to processes, it takes less time and resource to create a thread.
-	Threads share their parent process data and code
-	Context switching between threads is usually less expensive than between processes.
-	Thread intercommunication is relatively easy than process communication.
-	Enhanced performance by decreased development time
-	Simplified and streamlined program coding
-	Improvised GUI responsiveness
-	Simultaneous and parallelized occurrence of tasks
-	Better use of cache storage by utilization of resources
-	Decreased cost of maintenance
-	Better use of CPU resource
-	Multithreading does not only provide you with benefits, it has its disadvantages too. Let us go through some common 
+
+	1. Java Threads are lightweight compared to processes, it takes less time and resource to create a thread.
+	2. Threads share their parent process data and code
+	3. Context switching between threads is usually less expensive than between processes.
+	4. Thread intercommunication is relatively easy than process communication.
+	5. Enhanced performance by decreased development time
+	6. Simplified and streamlined program coding
+	7. Improvised GUI responsiveness
+	8. Simultaneous and parallelized occurrence of tasks
+	9. Better use of cache storage by utilization of resources
+	10. Decreased cost of maintenance
+	11. Better use of CPU resource
+	12. Multithreading does not only provide you with benefits, it has its disadvantages too. Let us go through some common 
+
 
 # Disadvantages of multithreading: 
-	Complex debugging and testing processes
-	Overhead switching of context
-	Increased potential for deadlock occurrence
-	Increased difficulty level in writing a program
-	Unpredictable results
+	1. Complex debugging and testing processes
+	2. Overhead switching of context
+	3. Increased potential for deadlock occurrence
+	4. Increased difficulty level in writing a program
+	5. Unpredictable results
 	
 # How can we create thread programmatically
 	1. Implementing the java.lang.Runnable interface.
@@ -51,7 +53,7 @@ If your class provides more functionality rather than just running as Thread, yo
 Implementing Runnable is preferred because java supports implementing multiple interfaces. If you extend Thread class, you can’t extend any other classes.
 
 **From Java 8 onwards, Runnable is a functional interface and we can use lambda expressions to provide it’s implementation rather than using anonymous class.**
-Like below - 
+Code below - 
 	
 	Runnable task2 = () -> { System.out.println("Task #2 is running"); };
 	// start the thread
