@@ -150,3 +150,38 @@ Thread safety in java is the process to make our program safe to use in multithr
     * We should not use any object that is maintained in a constant pool, for example String should not be used for synchronization because if any other code is also locking on same String, it will try to acquire lock on the same reference object from String pool and even though both the codes are unrelated, they will lock each other.
     
     
+# Daemon thread in java
+When a thread is marked as daemon thread, JVM doesn’t wait it to finish to terminate the program. As soon as all the user threads are finished, JVM terminates the program as well as all the associated daemon threads.
+
+**Thread.setDaemon(true)** is used to create a daemon thread in java. This method should be invoked before the thread is started otherwise it will throw **IllegalThreadStateException**.
+
+We can check if a thread is daemon thread or not by calling **isDaemon()* method on it.
+
+Another point is that when a thread is started, it inherits the daemon status of it’s parent thread.
+
+# How to Detect Deadlock in Java
+For analyzing deadlock, we need to look out for the threads with state as BLOCKED and then the resources it’s waiting to lock. Every resource has a unique ID using which we can find which thread is already holding the lock on the object. For example Thread “t3” is waiting to lock 0x000000013df2f658 but it’s already locked by thread “t1”.
+
+# How to avoid deadlock in java
+**Avoid Nested Locks:** This is the most common reason for deadlocks, avoid locking another resource if you already hold one. It’s almost impossible to get deadlock situation if you are working with only one object lock. For example, here is the another implementation of run() method without nested lock and program runs successfully without deadlock situation.
+
+**Lock Only What is Required:** You should acquire lock only on the resources you have to work on, for example in above program I am locking the complete Object resource but if we are only interested in one of it’s fields, then we should lock only that specific field not complete object.
+
+**Avoid waiting indefinitely:** You can get deadlock if two threads are waiting for each other to finish indefinitely using thread join. If your thread has to wait for another thread to finish, it’s always best to use join with maximum time you want to wait for thread to finish.
+    
+# Java Timer TimerTask
+Java java.util.Timer is a utility class that can be used to schedule a thread to be executed at certain time in future. Java Timer class can be used to schedule a task to be run one-time or to be run at regular intervals.
+
+Java TimerTask
+java.util.TimerTask is an abstract class that implements Runnable interface and we need to extend this class to create our own TimerTask that can be scheduled using java Timer class.
+
+# Java Callable Future
+Java Callable tasks return java.util.concurrent.Future object. Using Java Future object, we can find out the status of the Callable task and get the returned Object. It provides get() method that can wait for the Callable to finish and then return the result.
+
+Java Future provides cancel() method to cancel the associated Callable task. There is an overloaded version of get() method where we can specify the time to wait for the result, it’s useful to avoid current thread getting blocked for longer time. There are isDone() and isCancelled() methods to find out the current status of associated Callable task.
+
+Here is a simple example of Java Callable task that returns the name of thread executing the task after one second. We are using Executor framework to execute 100 tasks in parallel and use Java Future to get the result of the submitted tasks.
+
+# Java FutureTask Example Program
+FutureTask is base concrete implementation of Future interface and provides asynchronous processing. It contains the methods to start and cancel a task and also methods that can return the state of the FutureTask as whether it’s completed or cancelled. We need a callable object to create a future task and then we can use Java Thread Pool Executor to process these asynchronously.
+
