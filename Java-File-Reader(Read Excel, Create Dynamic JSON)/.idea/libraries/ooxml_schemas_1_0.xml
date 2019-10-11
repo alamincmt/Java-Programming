@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="ooxml-schemas-1.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../Desktop/jar_files/ooxml-schemas-1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

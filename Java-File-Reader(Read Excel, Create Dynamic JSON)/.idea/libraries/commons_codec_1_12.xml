@@ -1,0 +1,22 @@
+<component name="libraryTable">
+  <library name="commons-codec-1.12">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../Desktop/jar_files (2)/commons-codec-1.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Desktop/jar_files (2)/commons-collections4-4.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Desktop/jar_files (2)/commons-compress-1.18.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Desktop/jar_files (2)/commons-math3-3.6.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Desktop/jar_files (2)/curvesapi-1.06.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Desktop/jar_files (2)/guava-20.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Desktop/jar_files (2)/javassist-3.21.0-GA.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Desktop/jar_files (2)/jsr305-3.0.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Desktop/jar_files (2)/poi-4.1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Desktop/jar_files (2)/poi-ooxml-4.1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Desktop/jar_files (2)/poi-ooxml-schemas-4.1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Desktop/jar_files (2)/reflections-0.9.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Desktop/jar_files (2)/xcelite-1.2.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Desktop/jar_files (2)/xmlbeans-3.1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

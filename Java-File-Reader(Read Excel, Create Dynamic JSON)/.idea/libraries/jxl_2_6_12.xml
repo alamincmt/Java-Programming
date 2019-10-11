@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="jxl-2.6.12">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../Desktop/jar_files (3)/jxl-2.6.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Desktop/jar_files (3)/log4j-1.2.14.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
